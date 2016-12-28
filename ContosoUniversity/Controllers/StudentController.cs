@@ -28,7 +28,7 @@ namespace ContosoUniversity.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Student student = db.Students.Find(id);
+            Student student = db.Students.Find(id);//El método Find nos recupera los datos para obtener al estudiante.
             if (student == null)
             {
                 return HttpNotFound();
